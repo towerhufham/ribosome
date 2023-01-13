@@ -1,0 +1,131 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'ribosome.core/ribosome
+clj꞉ribosome.core꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+(for [[x y] glider-board]
+  (vec (* x scale) (* y scale) (* (+ x 1) scale) (* (+ y 1) scale)))
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (4) passed to: clojure.core/vec
+clj꞉user꞉> 
+(for [[x y] glider-board]
+  [(* x scale) (* y scale) (* (+ x 1) scale) (* (+ y 1) scale)])
+([8 8 12 12] [4 0 8 4] [0 8 4 12] [8 4 12 8] [4 8 8 12])
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+(for [[x y] glider-board]
+  [(* x scale) (* y scale) scale scale])
+([8 8 4 4] [4 0 4 4] [0 8 4 4] [8 4 4 4] [4 8 4 4])
+clj꞉user꞉> 
+(tick glider-board)
+#{[2 2] [1 3] [2 1] [1 2] [0 1]}
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+(into #{} [[0 1] [1 0]])
+#{[1 0] [0 1]}
+clj꞉user꞉> 
+(set (for [x [range 5] y [range 5]] (vector x y)))
+#{[(0 1 2 3 4) (0 1 2 3 4)]}
+clj꞉user꞉> 
+[(range 5)]
+[(0 1 2 3 4)]
+clj꞉user꞉> 
+(set (for [x [range 5] y [range 5]] (vector x y)))
+#{[5 5] [#function[clojure.core/range] #function[clojure.core/range]] [#function[clojure.core/range] 5] [5 #function[clojure.core/range]]}
+clj꞉user꞉> 
+[range 5]
+[#function[clojure.core/range] 5]
+clj꞉user꞉> 
+(set (for [x (vec (range 5)) y (vec (range 5))] (vector x y)))
+#{[4 3] [2 2] [0 0] [1 0] [2 3] [3 3] [1 1] [3 4] [4 2] [3 0] [4 1] [1 4] [1 3] [0 3] [2 4] [0 2] [2 0] [0 4] [3 1] [2 1] [4 4] [1 2] [3 2] [0 1] [4 0]}
+clj꞉user꞉> 
+#'user/random-board
+clj꞉user꞉> 
+(random-board 10 10 10)
+#{[8 7] [7 1] [7 7] [0 6] [9 9] [4 7] [4 1] [4 8] [5 8] [0 1]}
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 
