@@ -104,3 +104,11 @@ clj꞉user꞉> 
 ; Evaluating file: life.cljs
 #'user/GoL
 clj꞉user꞉> 
+; Evaluating file: life.cljs
+; Syntax error reading source at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\life.cljs:69:1).
+; EOF while reading, starting at line 42
+; Evaluation of file life.cljs failed: class clojure.lang.Compiler$CompilerException
+clj꞉user꞉> 
+; Evaluating file: life.cljs
+#'user/GoL
+clj꞉user꞉> 

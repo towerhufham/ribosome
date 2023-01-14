@@ -55,6 +55,7 @@
     (q/fill (int (* 255 (/ y 200))) 255 255)
     (q/rect (* x scale) (* y scale) scale scale)))
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (q/defsketch GoL
   :title "Game of Life"
   :size [800 800]
