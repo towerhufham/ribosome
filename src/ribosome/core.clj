@@ -11,6 +11,9 @@
 (defn to-board-index [x y]
   (+ x (* y width)))
 
+(defn random-index []
+  (rand-int (* width height)))
+
 (defn board-index-x [board-index]
   (mod board-index width))
 
@@ -59,33 +62,59 @@
 (defn tick [board]
   (apply-actions board (get-actions board)))
 
+
+
 ;;these return actions
+(defn cell-stationary [_ _ _]
+  {})
+
 (defn cell-grower [board board-index cell]
   (let [facing (board-index-in-dir board-index (cell :dir))]
     (if (nil? (get board facing))
       {:pos facing :cell {:func cell-grower :dir (cell :dir)}}
-      {:pos board-index :kill true})))
+      {:pos board-index :cell {:func cell-stationary :dir (cell :dir)}})))
 
 
 ;;note, board positions are hard-coded to the width/height of the board
 (def test-board {0 {:func cell-grower :dir [-1 -1]}, 1 {:func cell-grower :dir [1 0]}, 
                 200 {:func cell-grower :dir [0 1]}, 201 {:func cell-grower :dir [1 1]}})
 
+(defn random-grower []
+  (assoc {} (random-index) {:func cell-grower :dir (random-dir)}))
+
+(defn random-board [] (merge (random-grower) (random-grower) (random-grower) (random-grower) (random-grower)))
+
+;;assumes symmetrical board, width == height
+(def ^:dynamic *running-boarder* {})
+(defn apply-board-boarder [board] 
+  (binding [*running-boarder* board]
+    (doseq [n (range width)]
+      (set! *running-boarder* (merge *running-boarder* {(to-board-index n 0) {:func cell-stationary :dir [0 0]}}))
+      (set! *running-boarder* (merge *running-boarder* {(to-board-index 0 n) {:func cell-stationary :dir [0 0]}}))
+      (set! *running-boarder* (merge *running-boarder* {(to-board-index n (- height 1)) {:func cell-stationary :dir [0 0]}}))
+      (set! *running-boarder* (merge *running-boarder* {(to-board-index (- width 1) n) {:func cell-stationary :dir [0 0]}})))
+    *running-boarder*))
+
+
+
+
+
 
 ;;cell colors
-(def cell-colors {cell-grower [255 0 0]})
+(def cell-colors {cell-grower [255 0 0]
+                  cell-stationary [100 100 100]})
 
 (defn get-color [cell]
   (get cell-colors (cell :func)))
 
 
 (defn setup []
-  (q/frame-rate 20)
+  (q/frame-rate 60)
   (q/color-mode :rgb)
   (q/no-stroke)
   (q/no-smooth)
   ;; {:board (random-board 6000 200 200)})
-  {:board test-board})
+  {:board (apply-board-boarder (random-board))})
 
 (defn update-state [state]
   {:board (tick (:board state))})

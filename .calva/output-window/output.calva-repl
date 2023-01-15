@@ -18,1643 +18,81 @@
 clj꞉user꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-#'user/GoL
-clj꞉user꞉> 
-; Jacking in...
-; nREPL Connection was closed
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉user꞉> 
-; Jack-in done.
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-; Syntax error reading source at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\life.cljs:66:1).
-; EOF while reading, starting at line 29
-; Evaluation of file life.cljs failed: class clojure.lang.Compiler$CompilerException
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Aborting connect, error determining connect sequence.
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-; Syntax error reading source at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\life.cljs:69:1).
-; EOF while reading, starting at line 42
-; Evaluation of file life.cljs failed: class clojure.lang.Compiler$CompilerException
-clj꞉user꞉> 
-; Evaluating file: life.cljs
-#'user/GoL
-clj꞉user꞉> 
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
-(def s #{:a 1 :b 2 :c 3})
-#'user/s
+#'user/random-board
 clj꞉user꞉> 
-s
-#{1 :c 3 2 :b :a}
-clj꞉user꞉> (def m {:x 1 :y 2})
-#'user/m
+(random-board)
+{509 {:func #function[user/cell-grower], :dir [-1 1]}}
 clj꞉user꞉> 
-m
-{:x 1, :y 2}
+{34947 {:func #function[user/cell-grower], :dir [-1 -1]}}
 clj꞉user꞉> 
-:x m
-{:x 1, :y 2}
+#'user/random-board
 clj꞉user꞉> 
-m :x 
-:x
-clj꞉user꞉> 
-(:x m)
-1
+(random-board)
+{1343 {:func #function[user/cell-grower], :dir [0 -1]},
+ 3730 {:func #function[user/cell-grower], :dir [1 1]},
+ 20499 {:func #function[user/cell-grower], :dir [1 -1]}}
 clj꞉user꞉> 
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
 Exception in  :draw  function:  #error {
- :cause nth not supported on this type: PersistentArrayMap
+ :cause Don't know how to create ISeq from: user$random_board
  :via
- [{:type java.lang.UnsupportedOperationException
-   :message nth not supported on this type: PersistentArrayMap
-   :at [clojure.lang.RT nthFrom RT.java 991]}]
+ [{:type java.lang.IllegalArgumentException
+   :message Don't know how to create ISeq from: user$random_board
+   :at [clojure.lang.RT seqFrom RT.java 557]}]
  :trace
- [[clojure.lang.RT nthFrom RT.java 991]
-  [clojure.lang.RT nth RT.java 940]
-  [user$draw_state invokeStatic core.clj 55]
-  [user$draw_state invoke core.clj 53]
-  [clojure.lang.Var invoke Var.java 384]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 16]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.UnsupportedOperationException: nth not supported on this type: PersistentArrayMap
- at clojure.lang.RT.nthFrom (RT.java:991)
-    clojure.lang.RT.nth (RT.java:940)
-    user$draw_state.invokeStatic (core.clj:55)
-    user$draw_state.invoke (core.clj:53)
-    clojure.lang.Var.invoke (Var.java:384)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:16)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause nth not supported on this type: PersistentArrayMap
- :via
- [{:type java.lang.UnsupportedOperationException
-   :message nth not supported on this type: PersistentArrayMap
-   :at [clojure.lang.RT nthFrom RT.java 991]}]
- :trace
- [[clojure.lang.RT nthFrom RT.java 991]
-  [clojure.lang.RT nth RT.java 940]
-  [user$neighbors invokeStatic core.clj 13]
-  [user$neighbors invoke core.clj 13]
-  [user$all_neighbors$iter__11244__11248$fn__11249 invoke core.clj 24]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
+ [[clojure.lang.RT seqFrom RT.java 557]
+  [clojure.lang.RT seq RT.java 537]
   [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$map$fn__5866 invoke core.clj 2746]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invoke core.clj 137]
+  [user$draw_state invokeStatic core.clj 108]
+  [user$draw_state invoke core.clj 106]
+  [clojure.lang.Var invoke Var.java 384]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405 invoke fun_mode.cljc 16]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.IllegalArgumentException: Don't know how to create ISeq from: user$random_board
+ at clojure.lang.RT.seqFrom (RT.java:557)
+    clojure.lang.RT.seq (RT.java:537)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core/seq (core.clj:137)
+    user$draw_state.invokeStatic (core.clj:108)
+    user$draw_state.invoke (core.clj:106)
+    clojure.lang.Var.invoke (Var.java:384)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405.invoke (fun_mode.cljc:16)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Don't know how to create ISeq from: user$random_board
+ :via
+ [{:type java.lang.IllegalArgumentException
+   :message Don't know how to create ISeq from: user$random_board
+   :at [clojure.lang.RT seqFrom RT.java 557]}]
+ :trace
+ [[clojure.lang.RT seqFrom RT.java 557]
+  [clojure.lang.RT seq RT.java 537]
   [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core.protocols$seq_reduce invokeStatic protocols.clj 24]
-  [clojure.core.protocols$fn__8146 invokeStatic protocols.clj 75]
-  [clojure.core.protocols$fn__8146 invoke protocols.clj 75]
-  [clojure.core.protocols$fn__8088$G__8083__8101 invoke protocols.clj 13]
-  [clojure.core$reduce invokeStatic core.clj 6824]
-  [clojure.core$reduce invoke core.clj 6810]
-  [user$all_neighbors invokeStatic core.clj 23]
-  [user$all_neighbors invoke core.clj 22]
-  [user$tick invokeStatic core.clj 36]
-  [user$tick invoke core.clj 35]
-  [user$update_state invokeStatic core.clj 51]
-  [user$update_state invoke core.clj 50]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.UnsupportedOperationException: nth not supported on this type: PersistentArrayMap
- at clojure.lang.RT.nthFrom (RT.java:991)
-    clojure.lang.RT.nth (RT.java:940)
-    user$neighbors.invokeStatic (core.clj:13)
-    user$neighbors.invoke (core.clj:13)
-    user$all_neighbors$iter__11244__11248$fn__11249.invoke (core.clj:24)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$map$fn__5866.invoke (core.clj:2746)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core.protocols$seq_reduce.invokeStatic (protocols.clj:24)
-    clojure.core.protocols$fn__8146.invokeStatic (protocols.clj:75)
-    clojure.core.protocols/fn (protocols.clj:75)
-    clojure.core.protocols$fn__8088$G__8083__8101.invoke (protocols.clj:13)
-    clojure.core$reduce.invokeStatic (core.clj:6824)
-    clojure.core$reduce.invoke (core.clj:6810)
-    user$all_neighbors.invokeStatic (core.clj:23)
-    user$all_neighbors.invoke (core.clj:22)
-    user$tick.invokeStatic (core.clj:36)
-    user$tick.invoke (core.clj:35)
-    user$update_state.invokeStatic (core.clj:51)
-    user$update_state.invoke (core.clj:50)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-#'user/neighbors
-clj꞉user꞉> 
-(neighbors {:x 0 :y 0})
-([-1 -1] [-1 0] [-1 1] [0 -1] [0 1] [1 -1] [1 0] [1 1])
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-(0 test-board)
-; Execution error (ClassCastException) at user/eval11319 (form-init10592683928890627327.clj:276).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉user꞉> 
-(test-board 0)
-{:c 1}
-clj꞉user꞉> 
-(:c (test-board 0))
-1
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:10:8).
-; Unable to resolve symbol: width in this context
-clj꞉user꞉> 
-#'user/width
-clj꞉user꞉> 
-#'user/to-coord-key
-clj꞉user꞉> 
-(to-coord-key 2 2)
-402
-clj꞉user꞉> 
-(to-coord-key 199 199)
-39999
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-#'user/to-board-index
-clj꞉user꞉> 
-#'user/from-board-index
-clj꞉user꞉> 
-(board-index-x 201)
-1
-clj꞉user꞉> 
-(board-index-y 201)
-1
-clj꞉user꞉> 
-(from-board-index 201)
-[1 1]
-clj꞉user꞉> 
-(from-board-index 39999)
-[199 199]
-clj꞉user꞉> 
-(from-board-index 199)
-[199 0]
-clj꞉user꞉> 
-(from-board-index 200)
-[0 1]
-clj꞉user꞉> 
-#'user/neighbors
-clj꞉user꞉> 
-(neighbors 200)
-; Execution error (ClassCastException) at user/neighbors (form-init10592683928890627327.clj:25).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉user꞉> 
-#'user/neighbors
-clj꞉user꞉> 
-(neighbors 0)
-(-201 -1 199 -200 200 -199 1 201)
-clj꞉user꞉> 
-#'user/neighbors
-clj꞉user꞉> 
-(neighbors 0)
-[-201 -1 199 -200 200 -199 1 201]
-clj꞉user꞉> 
-(neighbors 201)
-[0 200 400 1 401 2 202 402]
-clj꞉user꞉> 
-#'user/neighbors
-clj꞉user꞉> 
-(neighbors 201)
-(0 200 400 1 401 2 202 402)
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:30:11).
-; Unable to resolve symbol: get-neighbors in this context
-clj꞉user꞉> 
-#'user/get-neighbors
-clj꞉user꞉> 
-#'user/neighbor-cells
-clj꞉user꞉> 
-(neighbor-cells 201)
-; Execution error (ArityException) at user/eval11511 (form-init10592683928890627327.clj:354).
-; Wrong number of args (1) passed to: user/neighbor-cells
-clj꞉user꞉> 
-(neighbor-cells test-board 201)
-({:c 1} {:c 1} nil {:c 1} nil nil nil nil)
-clj꞉user꞉> 
-#'user/neighbor-cells
-clj꞉user꞉> 
-(neighbor-cells test-board 201)
-({:c 1} {:c 1} {:c 1})
-clj꞉user꞉> 
-#'user/board-index-in-dir
-clj꞉user꞉> 
-(board-index-in-dir 201 [1 0])
-202
-clj꞉user꞉> 
-(board-index-in-dir 201 [-1 0])
-200
-clj꞉user꞉> 
-(board-index-in-dir 201 [1 1])
-402
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (NullPointerException) at user/get-actions$iter$fn (form-init10592683928890627327.clj:41).
-; Cannot invoke "clojure.lang.IFn.invoke(Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-clj꞉user꞉> 
-({:cell map?} :cell)
-#function[clojure.core/map?--5412]
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:50:1).
-; Unable to resolve symbol: cell-grower in this context
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions ); Evaluating file: core.clj
-#'user/test-board
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-(#function[user/cell-grower] #function[user/cell-grower] #function[user/cell-grower] #function[user/cell-grower])
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:42:5).
-; Unable to resolve symbol: board in this context
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> (get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.Symbol cannot be cast to class java.lang.Number (clojure.lang.Symbol is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(cell-grower test-board nil)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-(get board (board-index-in-dir board [1 0]))#'user/cell-grower
-clj꞉user꞉> 
-(get board (board-index-in-dir board [1 0]))
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\.calva\output-window\output.calva-repl:439:1).
-; Unable to resolve symbol: board in this context
-clj꞉user꞉> 
-(get board (board-index-in-dir 200 [1 0]))
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\.calva\output-window\output.calva-repl:443:1).
-; Unable to resolve symbol: board in this context
-clj꞉user꞉> 
-(board-index-in-dir 200 [1 0])
-201
-clj꞉user꞉> 
-(get board (board-index-in-dir 200 [1 0]))
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\.calva\output-window\output.calva-repl:450:1).
-; Unable to resolve symbol: board in this context
-clj꞉user꞉> 
-(get test-board (board-index-in-dir 200 [1 0]))
-{:cell #function[user/cell-grower]}
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
-; Wrong number of args (3) passed to: user/cell-grower
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
-; Wrong number of args (3) passed to: user/cell-grower
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
-; Wrong number of args (3) passed to: user/cell-grower
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(cell-grower test-board 201)
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-(cell-grower test-board 200)
-{}
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.Symbol cannot be cast to class java.lang.Number (clojure.lang.Symbol is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:1:7687).
-; Unable to resolve symbol: board in this context
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-([0 {:cell #function[user/cell-grower]}]
- [1 {:cell #function[user/cell-grower]}]
- [200 {:cell #function[user/cell-grower]}]
- [201 {:cell #function[user/cell-grower]}])
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-(apply cell-grower [test-board 1])
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-(apply cell-grower [test-board 0])
-{}
-clj꞉user꞉> 
-(get-actions test-board)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(get-actions test-board)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-(get-actions test-board)
-; Execution error (ClassCastException) at user/board-index-x (core.clj:15).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-(apply cell-grower [test-board 0])
-QUIT
-clj꞉user꞉> 
-clojure.lang.Numbers/remainder (Numbers.java:203)
-clojure.core/mod (core.clj:3571)
-clojure.core/mod (core.clj:3566)
-user/board-index-x (core.clj:15)
-user/board-index-x (core.clj:14)
-user/board-index-in-dir (core.clj:24)
-user/board-index-in-dir (core.clj:23)
-user/cell-grower (core.clj:46)
-user/cell-grower (core.clj:45)
-clojure.core/apply (core.clj:665)
-clojure.core/apply (core.clj:660)
-user/eval12066 (form-init10592683928890627327.clj:42)
-clojure.lang.LazySeq/sval (LazySeq.java:42)
-clojure.lang.LazySeq/seq (LazySeq.java:51)
-clojure.lang.RT/seq (RT.java:535)
-clojure.core/seq (core.clj:137)
-clojure.core/print-sequential (core_print.clj:53)
-clojure.core/fn (core_print.clj:174)
-clojure.lang.MultiFn/invoke (MultiFn.java:234)
-clojure.core/pr-on (core.clj:3674)
-clojure.core/pr (core.clj:3677)
-clojure.core/apply (core.clj:665)
-clojure.core/pr-str (core.clj:4736)
-cider.nrepl.middleware.debug/pr-short (debug.clj:188)
-cider.nrepl.middleware.debug/pr-short (debug.clj:180)
-cider.nrepl.middleware.debug/read-debug-command (debug.clj:341)
-cider.nrepl.middleware.debug/read-debug-command (debug.clj:314)
-cider.nrepl.middleware.debug/break (debug.clj:519)
-cider.nrepl.middleware.debug/break (debug.clj:497)
-user/eval12066 (form-init10592683928890627327.clj:40)
-user/eval12086 (form-init10592683928890627327.clj:556)
-clojure.lang.Compiler/eval (Compiler.java:7177)
-clojure.core/eval (core.clj:3214)
-clojure.core/eval (core.clj:3210)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.core/apply (core.clj:665)
-clojure.core/with-bindings* (core.clj:1973)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.main/repl (main.clj:437)
-clojure.main/repl (main.clj:458)
-clojure.main/repl (main.clj:368)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
-nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
-nrepl.middleware.session/session-exec (session.clj:218)
-nrepl.middleware.session/session-exec (session.clj:217)
-java.lang.Thread/run (Thread.java:1589)
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-#'user/board-index-in-dir
-clj꞉user꞉> 
-(get-actions test-board)
-QUIT
-clj꞉user꞉> 
-#'user/board-index-in-dir
-clj꞉user꞉> 
-(for [[k v] test-board] [k v])
-([0 {:cell #function[user/cell-grower]}]
- [1 {:cell #function[user/cell-grower]}]
- [200 {:cell #function[user/cell-grower]}]
- [201 {:cell #function[user/cell-grower]}])
-clj꞉user꞉> 
-(for [[k v] test-board] k)
-(0 1 200 201)
-clj꞉user꞉> 
-#'user/board-index-in-dir
-clj꞉user꞉> 
-(get-actions test-board)
-QUIT
-clj꞉user꞉> 
-#'user/board-index-in-dir
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-((apply (cell :cell) [board board-index])
- (apply (cell :cell) [board board-index])
- (apply (cell :cell) [board board-index])
- (apply (cell :cell) [board board-index]))
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-([{0 {:cell #function[user/cell-grower]},
-   1 {:cell #function[user/cell-grower]},
-   200 {:cell #function[user/cell-grower]},
-   201 {:cell #function[user/cell-grower]}}
-  0]
- [{0 {:cell #function[user/cell-grower]},
-   1 {:cell #function[user/cell-grower]},
-   200 {:cell #function[user/cell-grower]},
-   201 {:cell #function[user/cell-grower]}}
-  1]
- [{0 {:cell #function[user/cell-grower]},
-   1 {:cell #function[user/cell-grower]},
-   200 {:cell #function[user/cell-grower]},
-   201 {:cell #function[user/cell-grower]}}
-  200]
- [{0 {:cell #function[user/cell-grower]},
-   1 {:cell #function[user/cell-grower]},
-   200 {:cell #function[user/cell-grower]},
-   201 {:cell #function[user/cell-grower]}}
-  201])
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-([0 {:cell #function[user/cell-grower]}]
- [1 {:cell #function[user/cell-grower]}]
- [200 {:cell #function[user/cell-grower]}]
- [201 {:cell #function[user/cell-grower]}])
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(get-actions test-board)
-([0 {:cell #function[user/cell-grower]}]
- [1 {:cell #function[user/cell-grower]}]
- [200 {:cell #function[user/cell-grower]}]
- [201 {:cell #function[user/cell-grower]}])
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.Symbol cannot be cast to class java.lang.Number (clojure.lang.Symbol is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) test-board 0)
-; Execution error (IllegalArgumentException) at user/eval12348 (form-init10592683928890627327.clj:716).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) test-board 0)
-; Execution error (IllegalArgumentException) at user/eval12350 (form-init10592683928890627327.clj:720).
-; Don't know how to create ISeq from: java.lang.Long
-clj꞉user꞉> 
-({:cell cell-grower} :cell)
-#function[user/cell-grower]
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) [test-board 0])
-[{0 {:cell #function[user/cell-grower]}} 0]
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) '[test-board 0])
-[test-board 0]
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-(get-actions test-board)
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/remainder (Numbers.java:203).
-; class clojure.lang.Symbol cannot be cast to class java.lang.Number (clojure.lang.Symbol is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉user꞉> 
-'[(+ 2 1)]
-[(+ 2 1)]
-clj꞉user꞉> 
-[test-board 201]
-[{0 {:cell #function[user/cell-grower]},
-  1 {:cell #function[user/cell-grower]},
-  200 {:cell #function[user/cell-grower]},
-  201 {:cell #function[user/cell-grower]}}
- 201]
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) '[test-board 0])
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-(apply ({:cell cell-grower} :cell) [test-board 0])
-{}
-clj꞉user꞉> 
-(({:cell cell-grower} :cell) test-board 1)
-{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-({}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
- {}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]})
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-({}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
- {}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]})
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-({:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]})
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-[{:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}
- {:type "spawn", :dir [1 0], :cell #function[user/cell-grower]}]
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/test-board
-clj꞉user꞉> 
-(get-actions test-board)
-[{:type "spawn", :dir [1 0], :func #function[user/cell-grower]}
- {:type "spawn", :dir [1 0], :func #function[user/cell-grower]}]
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-(get-actions test-board)
-[{:type "spawn", :dir [1 0], :func #function[user/cell-grower]}
- {:type "spawn", :dir [1 0], :func #function[user/cell-grower]}]
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-#'user/get-actions
-clj꞉user꞉> 
-(get-actions test-board)
-[{:type "spawn", :dir [1 0], :func #function[user/cell-grower]}
- {:type "spawn", :dir [1 0], :func #function[user/cell-grower]}]
-clj꞉user꞉> 
-#'user/test-board
-clj꞉user꞉> 
-(get-actions test-board)
-[{:type "spawn", :pos 2, :cell {:func #function[user/cell-grower]}}
- {:type "spawn", :pos 202, :cell {:func #function[user/cell-grower]}}]
-clj꞉user꞉> 
-#'user/apply-action
-clj꞉user꞉> 
-(apply-action test-board {:type "spawn", :pos 2, :cell {:func #function[user/cell-grower]}})
-; Syntax error reading source at (REPL:821:90).
-; No reader function for tag function
-clj꞉user꞉> 
-(apply-action test-board {:type "spawn", :pos 2, :cell {:func cell-grower}})
-{0 {:func #function[user/cell-grower]},
- 1 {:func #function[user/cell-grower]},
- 200 {:func #function[user/cell-grower]},
- 201 {:func #function[user/cell-grower]},
- 2 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-; Syntax error (IllegalArgumentException) compiling fn* at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:48:1).
-; Cannot assign to non-mutable: running_board
-clj꞉user꞉> 
-#'user/running-board
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-; Execution error (IllegalStateException) at user/apply-actions (form-init10592683928890627327.clj:49).
-; Can't change/establish root binding of: running-board with set
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-; Execution error (IllegalStateException) at user/apply-actions (form-init10592683928890627327.clj:49).
-; Can't change/establish root binding of: *running-board* with set
-clj꞉user꞉> 
-#'user/running-board
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-; Execution error (IllegalStateException) at user/apply-actions (form-init10592683928890627327.clj:49).
-; Can't change/establish root binding of: running-board with set
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-#'user/*running-board*
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-nil
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-{}
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-QUIT
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-{0 {:func #function[user/cell-grower]},
- 1 {:func #function[user/cell-grower]},
- 200 {:func #function[user/cell-grower]},
- 201 {:func #function[user/cell-grower]},
- 202 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-{0 {:func #function[user/cell-grower]},
- 1 {:func #function[user/cell-grower]},
- 200 {:func #function[user/cell-grower]},
- 201 {:func #function[user/cell-grower]},
- 2 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-#'user/apply-actions
-clj꞉user꞉> 
-(apply-actions test-board (get-actions test-board))
-{0 {:func #function[user/cell-grower]},
- 1 {:func #function[user/cell-grower]},
- 200 {:func #function[user/cell-grower]},
- 201 {:func #function[user/cell-grower]},
- 202 {:func #function[user/cell-grower]},
- 2 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-#'user/tick
-clj꞉user꞉> 
-(tick (tick (tick (test-board))))
-; Execution error (ArityException) at user/eval12697 (form-init10592683928890627327.clj:904).
-; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
-clj꞉user꞉> 
-#'user/tick
-clj꞉user꞉> 
-(tick (tick (tick test-board)))
-{0 {:func #function[user/cell-grower]},
- 1 {:func #function[user/cell-grower]},
- 4 {:func #function[user/cell-grower]},
- 204 {:func #function[user/cell-grower]},
- 201 {:func #function[user/cell-grower]},
- 3 {:func #function[user/cell-grower]},
- 2 {:func #function[user/cell-grower]},
- 202 {:func #function[user/cell-grower]},
- 200 {:func #function[user/cell-grower]},
- 203 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\src\ribosome\core.clj:74:3).
-; Unable to resolve symbol: cell-colors in this context
-clj꞉user꞉> 
-#'user/cell-colors
-clj꞉user꞉> 
-#'user/get-color
-clj꞉user꞉> 
-(get-color {0 {:func cell-grower}})
-nil
-clj꞉user꞉> 
-(get-color {:func cell-grower})
-[255 0 0]
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-#'user/cell-grower
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers add Numbers.java 153]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 61]
-  [user$cell_grower invoke core.clj 60]
-  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 58]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 40]
-  [user$get_actions invoke core.clj 39]
-  [user$tick invokeStatic core.clj 57]
-  [user$tick invoke core.clj 56]
-  [user$update_state invokeStatic core.clj 88]
-  [user$update_state invoke core.clj 87]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.add (Numbers.java:153)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:61)
-    user$cell_grower.invoke (core.clj:60)
-    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:58)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:40)
-    user$get_actions.invoke (core.clj:39)
-    user$tick.invokeStatic (core.clj:57)
-    user$tick.invoke (core.clj:56)
-    user$update_state.invokeStatic (core.clj:88)
-    user$update_state.invoke (core.clj:87)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-
-; Syntax error (ClassNotFoundException) compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\.calva\output-window\output.calva-repl:1557:54).
-; PSurfaceNone.java:313
-clj꞉user꞉> 
-
-(tick test-board)
-{0 {:func #function[user/cell-grower], :dir [0 0]},
- 1 {:func #function[user/cell-grower], :dir [1 0]},
- 200 {:func #function[user/cell-grower], :dir [0 1]},
- 201 {:func #function[user/cell-grower], :dir [1 1]},
- 2 {:func #function[user/cell-grower]},
- 402 {:func #function[user/cell-grower]},
- 400 {:func #function[user/cell-grower]}}
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-#'user/random-dir
-clj꞉user꞉> 
-(random-dir)
-[-1 1]
-clj꞉user꞉> 
-(random-dir)
-[1 -1]
-clj꞉user꞉> 
-(random-dir)
-[0 1]
-clj꞉user꞉> 
-(assoc {:a 1} :a 2)
-{:a 2}
-clj꞉user꞉> 
-; Evaluating file: core.clj
-#'user/GoL
-clj꞉user꞉> 
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers remainder Numbers.java 203]
-  [clojure.core$mod invokeStatic core.clj 3571]
-  [clojure.core$mod invoke core.clj 3566]
-  [user$board_index_x invokeStatic core.clj 15]
-  [user$board_index_x invoke core.clj 14]
-  [user$draw_state invokeStatic core.clj 94]
-  [user$draw_state invoke core.clj 91]
-  [clojure.lang.Var invoke Var.java 384]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 16]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.remainder (Numbers.java:203)
-    clojure.core$mod.invokeStatic (core.clj:3571)
-    clojure.core$mod.invoke (core.clj:3566)
-    user$board_index_x.invokeStatic (core.clj:15)
-    user$board_index_x.invoke (core.clj:14)
-    user$draw_state.invokeStatic (core.clj:94)
-    user$draw_state.invoke (core.clj:91)
-    clojure.lang.Var.invoke (Var.java:384)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:16)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "Object.getClass()" because "x" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "Object.getClass()" because "x" is null
-   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
- :trace
- [[clojure.lang.Numbers ops Numbers.java 1068]
-  [clojure.lang.Numbers remainder Numbers.java 203]
-  [clojure.core$mod invokeStatic core.clj 3571]
-  [clojure.core$mod invoke core.clj 3566]
-  [user$board_index_x invokeStatic core.clj 15]
-  [user$board_index_x invoke core.clj 14]
-  [user$board_index_in_dir invokeStatic core.clj 24]
-  [user$board_index_in_dir invoke core.clj 23]
-  [user$cell_grower invokeStatic core.clj 62]
-  [user$cell_grower invoke core.clj 61]
-  [user$get_actions$iter__13809__13813$fn__13814 invoke core.clj 44]
+  [clojure.core$seq__5402 invoke core.clj 137]
+  [user$get_actions$iter__8777__8781$fn__8782 invoke core.clj 46]
   [clojure.lang.LazySeq sval LazySeq.java 42]
   [clojure.lang.LazySeq seq LazySeq.java 51]
   [clojure.lang.RT seq RT.java 535]
@@ -1666,17 +104,17 @@ Exception in  :draw  function:  #error {
   [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
   [clojure.core$vec invokeStatic core.clj 377]
   [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
+  [user$get_actions invokeStatic core.clj 46]
+  [user$get_actions invoke core.clj 45]
+  [user$tick invokeStatic core.clj 63]
+  [user$tick invoke core.clj 62]
+  [user$update_state invokeStatic core.clj 104]
+  [user$update_state invoke core.clj 103]
   [clojure.lang.Var invoke Var.java 384]
   [clojure.lang.Atom swap Atom.java 37]
   [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
   [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405 invoke fun_mode.cljc 13]
   [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
   [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
   [quil.applet$_draw invokeStatic applet.clj 217]
@@ -1686,18 +124,12 @@ Exception in  :draw  function:  #error {
   [quil.Applet handleDraw nil -1]
   [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
   [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
- at clojure.lang.Numbers.ops (Numbers.java:1068)
-    clojure.lang.Numbers.remainder (Numbers.java:203)
-    clojure.core$mod.invokeStatic (core.clj:3571)
-    clojure.core$mod.invoke (core.clj:3566)
-    user$board_index_x.invokeStatic (core.clj:15)
-    user$board_index_x.invoke (core.clj:14)
-    user$board_index_in_dir.invokeStatic (core.clj:24)
-    user$board_index_in_dir.invoke (core.clj:23)
-    user$cell_grower.invokeStatic (core.clj:62)
-    user$cell_grower.invoke (core.clj:61)
-    user$get_actions$iter__13809__13813$fn__13814.invoke (core.clj:44)
+stacktrace:  java.lang.IllegalArgumentException: Don't know how to create ISeq from: user$random_board
+ at clojure.lang.RT.seqFrom (RT.java:557)
+    clojure.lang.RT.seq (RT.java:537)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core/seq (core.clj:137)
+    user$get_actions$iter__8777__8781$fn__8782.invoke (core.clj:46)
     clojure.lang.LazySeq.sval (LazySeq.java:42)
     clojure.lang.LazySeq.seq (LazySeq.java:51)
     clojure.lang.RT.seq (RT.java:535)
@@ -1709,17 +141,17 @@ stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" b
     clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
     clojure.core$vec.invokeStatic (core.clj:377)
     clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
+    user$get_actions.invokeStatic (core.clj:46)
+    user$get_actions.invoke (core.clj:45)
+    user$tick.invokeStatic (core.clj:63)
+    user$tick.invoke (core.clj:62)
+    user$update_state.invokeStatic (core.clj:104)
+    user$update_state.invoke (core.clj:103)
     clojure.lang.Var.invoke (Var.java:384)
     clojure.lang.Atom.swap (Atom.java:37)
     clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
     clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405.invoke (fun_mode.cljc:13)
     quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
     quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
     quil.applet$_draw.invokeStatic (applet.clj:217)
@@ -1730,488 +162,212 @@ stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" b
     processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
     processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
 
-; Evaluating file: core.clj
-#'user/GoL
+Exception in  :draw  function:  #error {
+ :cause Don't know how to create ISeq from: user$random_board
+ :via
+ [{:type java.lang.IllegalArgumentException
+   :message Don't know how to create ISeq from: user$random_board
+   :at [clojure.lang.RT seqFrom RT.java 557]}]
+ :trace
+ [[clojure.lang.RT seqFrom RT.java 557]
+  [clojure.lang.RT seq RT.java 537]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$seq__5402 invoke core.clj 137]
+  [user$get_actions$iter__8777__8781$fn__8782 invoke core.clj 46]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 46]
+  [user$get_actions invoke core.clj 45]
+  [user$tick invokeStatic core.clj 63]
+  [user$tick invoke core.clj 62]
+  [user$update_state invokeStatic core.clj 104]
+  [user$update_state invoke core.clj 103]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.IllegalArgumentException: Don't know how to create ISeq from: user$random_board
+ at clojure.lang.RT.seqFrom (RT.java:557)
+    clojure.lang.RT.seq (RT.java:537)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core/seq (core.clj:137)
+    user$get_actions$iter__8777__8781$fn__8782.invoke (core.clj:46)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:46)
+    user$get_actions.invoke (core.clj:45)
+    user$tick.invokeStatic (core.clj:63)
+    user$tick.invoke (core.clj:62)
+    user$update_state.invokeStatic (core.clj:104)
+    user$update_state.invoke (core.clj:103)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6405.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+#'user/random-board
+clj꞉user꞉> 
+(random-board)
+{10544 {:func #function[user/cell-grower], :dir [1 0]},
+ 37910 {:func #function[user/cell-grower], :dir [1 -1]},
+ 25598 {:func #function[user/cell-grower], :dir [0 -1]},
+ 35382 {:func #function[user/cell-grower], :dir [0 -1]},
+ 2475 {:func #function[user/cell-grower], :dir [1 0]}}
 clj꞉user꞉> 
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
-   :at [user$get_color invokeStatic core.clj 77]}]
- :trace
- [[user$get_color invokeStatic core.clj 77]
-  [user$get_color invoke core.clj 76]
-  [user$draw_state invokeStatic core.clj 95]
-  [user$draw_state invoke core.clj 91]
-  [clojure.lang.Var invoke Var.java 384]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 16]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- at user$get_color.invokeStatic (core.clj:77)
-    user$get_color.invoke (core.clj:76)
-    user$draw_state.invokeStatic (core.clj:95)
-    user$draw_state.invoke (core.clj:91)
-    clojure.lang.Var.invoke (Var.java:384)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:16)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
-   :at [user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]}]
- :trace
- [[user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- at user$get_actions$iter__14017__14021$fn__14022.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
-   :at [user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]}]
- :trace
- [[user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
- at user$get_actions$iter__14017__14021$fn__14022.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+#'user/apply-board-boarder
+clj꞉user꞉> 
+(apply-board-boarder test-board)
+{0 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39849 {:func #function[user/cell-stationary], :dir [0 0]},
+ 31800 {:func #function[user/cell-stationary], :dir [0 0]},
+ 20399 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39840 {:func #function[user/cell-stationary], :dir [0 0]},
+ 12000 {:func #function[user/cell-stationary], :dir [0 0]},
+ 26200 {:func #function[user/cell-stationary], :dir [0 0]},
+ 18799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 30599 {:func #function[user/cell-stationary], :dir [0 0]},
+ 16799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 26600 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39820 {:func #function[user/cell-stationary], :dir [0 0]},
+ 16000 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39925 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39942 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39900 {:func #function[user/cell-stationary], :dir [0 0]},
+ 33200 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39988 {:func #function[user/cell-stationary], :dir [0 0]},
+ 121 {:func #function[user/cell-stationary], :dir [0 0]},
+ 28799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 22799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 65 {:func #function[user/cell-stationary], :dir [0 0]},
+ 16600 {:func #function[user/cell-stationary], :dir [0 0]},
+ 24800 {:func #function[user/cell-stationary], :dir [0 0]},
+ 70 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39852 {:func #function[user/cell-stationary], :dir [0 0]},
+ 6599 {:func #function[user/cell-stationary], :dir [0 0]},
+ 18000 {:func #function[user/cell-stationary], :dir [0 0]},
+ 28200 {:func #function[user/cell-stationary], :dir [0 0]},
+ 62 {:func #function[user/cell-stationary], :dir [0 0]},
+ 74 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39873 {:func #function[user/cell-stationary], :dir [0 0]},
+ 29799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 13999 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39946 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39826 {:func #function[user/cell-stationary], :dir [0 0]},
+ 5399 {:func #function[user/cell-stationary], :dir [0 0]},
+ 19999 {:func #function[user/cell-stationary], :dir [0 0]},
+ 10999 {:func #function[user/cell-stationary], :dir [0 0]},
+ 3000 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39824 {:func #function[user/cell-stationary], :dir [0 0]},
+ 164 {:func #function[user/cell-stationary], :dir [0 0]},
+ 799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 24400 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39977 {:func #function[user/cell-stationary], :dir [0 0]},
+ 186 {:func #function[user/cell-stationary], :dir [0 0]},
+ 37799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 39969 {:func #function[user/cell-stationary], :dir [0 0]},
+ 12799 {:func #function[user/cell-stationary], :dir [0 0]},
+ 25999 {:func #function[user/cell-stationary], :dir [0 0]},
+ ...}
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :setup  function:  #error {
+ :cause class user$random_board cannot be cast to class clojure.lang.IPersistentCollection (user$random_board is in unnamed module of loader clojure.lang.DynamicClassLoader @2b6d0235; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
  :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
+ [{:type java.lang.ClassCastException
+   :message class user$random_board cannot be cast to class clojure.lang.IPersistentCollection (user$random_board is in unnamed module of loader clojure.lang.DynamicClassLoader @2b6d0235; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+   :at [clojure.core$conj__5390 invokeStatic core.clj 82]}]
  :trace
- [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+ [[clojure.core$conj__5390 invokeStatic core.clj 82]
+  [clojure.core$merge$fn__5958 invoke core.clj 3049]
+  [clojure.core$reduce1 invokeStatic core.clj 944]
+  [clojure.core$reduce1 invokeStatic core.clj 934]
+  [clojure.core$merge invokeStatic core.clj 3048]
+  [clojure.core$merge doInvoke core.clj 3041]
+  [clojure.lang.RestFn invoke RestFn.java 421]
+  [user$apply_board_boarder invokeStatic core.clj 92]
+  [user$apply_board_boarder invoke core.clj 89]
+  [user$setup invokeStatic core.clj 117]
+  [user$setup invoke core.clj 111]
+  [clojure.lang.Var invoke Var.java 380]
+  [quil.middlewares.fun_mode$wrap_setup$fn__6400 invoke fun_mode.cljc 7]
   [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
   [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.applet$_setup invokeStatic applet.clj 213]
+  [quil.applet$_setup invoke applet.clj 205]
+  [quil.Applet setup nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2425]
   [quil.Applet handleDraw nil -1]
   [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
   [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+stacktrace:  java.lang.ClassCastException: class user$random_board cannot be cast to class clojure.lang.IPersistentCollection (user$random_board is in unnamed module of loader clojure.lang.DynamicClassLoader @2b6d0235; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+ at clojure.core$conj__5390.invokeStatic (core.clj:82)
+    clojure.core$merge$fn__5958.invoke (core.clj:3049)
+    clojure.core$reduce1.invokeStatic (core.clj:944)
+    clojure.core$reduce1.invokeStatic (core.clj:934)
+    clojure.core$merge.invokeStatic (core.clj:3048)
+    clojure.core$merge.doInvoke (core.clj:3041)
+    clojure.lang.RestFn.invoke (RestFn.java:421)
+    user$apply_board_boarder.invokeStatic (core.clj:92)
+    user$apply_board_boarder.invoke (core.clj:89)
+    user$setup.invokeStatic (core.clj:117)
+    user$setup.invoke (core.clj:111)
+    clojure.lang.Var.invoke (Var.java:380)
+    quil.middlewares.fun_mode$wrap_setup$fn__6400.invoke (fun_mode.cljc:7)
     quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
     quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
- :trace
- [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
- :trace
- [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
-    quil.Applet.handleDraw (:-1)
-    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
-    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
-
-Exception in  :draw  function:  #error {
- :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- :via
- [{:type java.lang.NullPointerException
-   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
- :trace
- [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.core$seq__5402 invokeStatic core.clj 137]
-  [clojure.core$filter$fn__5893 invoke core.clj 2809]
-  [clojure.lang.LazySeq sval LazySeq.java 42]
-  [clojure.lang.LazySeq seq LazySeq.java 51]
-  [clojure.lang.RT seq RT.java 535]
-  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
-  [clojure.core$vec invokeStatic core.clj 377]
-  [clojure.core$vec invoke core.clj 367]
-  [user$get_actions invokeStatic core.clj 43]
-  [user$get_actions invoke core.clj 42]
-  [user$tick invokeStatic core.clj 58]
-  [user$tick invoke core.clj 57]
-  [user$update_state invokeStatic core.clj 89]
-  [user$update_state invoke core.clj 88]
-  [clojure.lang.Var invoke Var.java 384]
-  [clojure.lang.Atom swap Atom.java 37]
-  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
-  [clojure.core$swap_BANG_ invoke core.clj 2345]
-  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
-  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
-  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
-  [quil.applet$_draw invokeStatic applet.clj 217]
-  [quil.applet$_draw invoke applet.clj 215]
-  [quil.Applet draw nil -1]
-  [processing.core.PApplet handleDraw PApplet.java 2475]
-  [quil.Applet handleDraw nil -1]
-  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
-  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
-stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
- at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.core$seq__5402.invokeStatic (core.clj:137)
-    clojure.core$filter$fn__5893.invoke (core.clj:2809)
-    clojure.lang.LazySeq.sval (LazySeq.java:42)
-    clojure.lang.LazySeq.seq (LazySeq.java:51)
-    clojure.lang.RT.seq (RT.java:535)
-    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
-    clojure.core$vec.invokeStatic (core.clj:377)
-    clojure.core$vec.invoke (core.clj:367)
-    user$get_actions.invokeStatic (core.clj:43)
-    user$get_actions.invoke (core.clj:42)
-    user$tick.invokeStatic (core.clj:58)
-    user$tick.invoke (core.clj:57)
-    user$update_state.invokeStatic (core.clj:89)
-    user$update_state.invoke (core.clj:88)
-    clojure.lang.Var.invoke (Var.java:384)
-    clojure.lang.Atom.swap (Atom.java:37)
-    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
-    clojure.core$swap_BANG_.invoke (core.clj:2345)
-    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
-    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
-    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
-    quil.applet$_draw.invokeStatic (applet.clj:217)
-    quil.applet$_draw.invoke (applet.clj:215)
-    quil.Applet.draw (:-1)
-    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.applet$_setup.invokeStatic (applet.clj:213)
+    quil.applet$_setup.invoke (applet.clj:205)
+    quil.Applet.setup (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2425)
     quil.Applet.handleDraw (:-1)
     processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
     processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
