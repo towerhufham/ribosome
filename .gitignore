@@ -16,3 +16,6 @@ pom.xml.asc
 .clj-kondo
 .lsp
 .calva
+*.json
+.clj-kondo/.cache/v1/cljs/user.transit.json
+*.calva-repl
