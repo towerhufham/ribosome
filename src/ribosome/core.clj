@@ -35,15 +35,18 @@
     (get board n))))
 
 
+(defn random-dir []
+  (first (shuffle [[-1 -1] [-1 0] [-1 1] [0 -1] [0 1] [1 -1] [1 0] [1 1]])))
+
 
 (defn get-actions [board]
   (vec (filter seq (for [[board-index cell] board]
-    ((cell :func) board board-index)))))
+    ((cell :func) board board-index cell)))))
 
-(defn apply-action [board action]
-  (if (= (action :type) "spawn")
-    (assoc board (action :pos) (action :cell))
-    board))
+(defn apply-action [board action] 
+  (if (true? (action :kill))
+    (dissoc board (action :pos))
+    (assoc board (action :pos) (action :cell)))) 
 
 (def ^:dynamic *running-board* {})
 (defn apply-actions [board raw-actions]
@@ -57,14 +60,16 @@
   (apply-actions board (get-actions board)))
 
 ;;these return actions
-(defn cell-grower [board board-index]
-  (let [pos (board-index-in-dir board-index [1 0])]
-    (if (nil? (get board pos))
-      {:type "spawn" :pos pos :cell {:func cell-grower}}
-      {})))
+(defn cell-grower [board board-index cell]
+  (let [facing (board-index-in-dir board-index (cell :dir))]
+    (if (nil? (get board facing))
+      {:pos facing :cell {:func cell-grower :dir (cell :dir)}}
+      {:pos board-index :kill true})))
 
-(def test-board {0 {:func cell-grower}, 1 {:func cell-grower}, 
-                200 {:func cell-grower}, 201 {:func cell-grower}})
+
+;;note, board positions are hard-coded to the width/height of the board
+(def test-board {0 {:func cell-grower :dir [-1 -1]}, 1 {:func cell-grower :dir [1 0]}, 
+                200 {:func cell-grower :dir [0 1]}, 201 {:func cell-grower :dir [1 1]}})
 
 
 ;;cell colors

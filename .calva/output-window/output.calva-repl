@@ -938,3 +938,1284 @@ clj꞉user꞉> 
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13380__13384$fn__13385 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13380__13384$fn__13385.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+#'user/cell-grower
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers add Numbers.java 153]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 61]
+  [user$cell_grower invoke core.clj 60]
+  [user$get_actions$iter__13590__13594$fn__13595 invoke core.clj 41]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 58]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 40]
+  [user$get_actions invoke core.clj 39]
+  [user$tick invokeStatic core.clj 57]
+  [user$tick invoke core.clj 56]
+  [user$update_state invokeStatic core.clj 88]
+  [user$update_state invoke core.clj 87]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.add (Numbers.java:153)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:61)
+    user$cell_grower.invoke (core.clj:60)
+    user$get_actions$iter__13590__13594$fn__13595.invoke (core.clj:41)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:58)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:40)
+    user$get_actions.invoke (core.clj:39)
+    user$tick.invokeStatic (core.clj:57)
+    user$tick.invoke (core.clj:56)
+    user$update_state.invokeStatic (core.clj:88)
+    user$update_state.invoke (core.clj:87)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+
+; Syntax error (ClassNotFoundException) compiling at (c:\Users\tower\OneDrive\Documents\GitHub\ribosome\.calva\output-window\output.calva-repl:1557:54).
+; PSurfaceNone.java:313
+clj꞉user꞉> 
+
+(tick test-board)
+{0 {:func #function[user/cell-grower], :dir [0 0]},
+ 1 {:func #function[user/cell-grower], :dir [1 0]},
+ 200 {:func #function[user/cell-grower], :dir [0 1]},
+ 201 {:func #function[user/cell-grower], :dir [1 1]},
+ 2 {:func #function[user/cell-grower]},
+ 402 {:func #function[user/cell-grower]},
+ 400 {:func #function[user/cell-grower]}}
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+#'user/random-dir
+clj꞉user꞉> 
+(random-dir)
+[-1 1]
+clj꞉user꞉> 
+(random-dir)
+[1 -1]
+clj꞉user꞉> 
+(random-dir)
+[0 1]
+clj꞉user꞉> 
+(assoc {:a 1} :a 2)
+{:a 2}
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers remainder Numbers.java 203]
+  [clojure.core$mod invokeStatic core.clj 3571]
+  [clojure.core$mod invoke core.clj 3566]
+  [user$board_index_x invokeStatic core.clj 15]
+  [user$board_index_x invoke core.clj 14]
+  [user$draw_state invokeStatic core.clj 94]
+  [user$draw_state invoke core.clj 91]
+  [clojure.lang.Var invoke Var.java 384]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 16]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.remainder (Numbers.java:203)
+    clojure.core$mod.invokeStatic (core.clj:3571)
+    clojure.core$mod.invoke (core.clj:3566)
+    user$board_index_x.invokeStatic (core.clj:15)
+    user$board_index_x.invoke (core.clj:14)
+    user$draw_state.invokeStatic (core.clj:94)
+    user$draw_state.invoke (core.clj:91)
+    clojure.lang.Var.invoke (Var.java:384)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:16)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "Object.getClass()" because "x" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "Object.getClass()" because "x" is null
+   :at [clojure.lang.Numbers ops Numbers.java 1068]}]
+ :trace
+ [[clojure.lang.Numbers ops Numbers.java 1068]
+  [clojure.lang.Numbers remainder Numbers.java 203]
+  [clojure.core$mod invokeStatic core.clj 3571]
+  [clojure.core$mod invoke core.clj 3566]
+  [user$board_index_x invokeStatic core.clj 15]
+  [user$board_index_x invoke core.clj 14]
+  [user$board_index_in_dir invokeStatic core.clj 24]
+  [user$board_index_in_dir invoke core.clj 23]
+  [user$cell_grower invokeStatic core.clj 62]
+  [user$cell_grower invoke core.clj 61]
+  [user$get_actions$iter__13809__13813$fn__13814 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+ at clojure.lang.Numbers.ops (Numbers.java:1068)
+    clojure.lang.Numbers.remainder (Numbers.java:203)
+    clojure.core$mod.invokeStatic (core.clj:3571)
+    clojure.core$mod.invoke (core.clj:3566)
+    user$board_index_x.invokeStatic (core.clj:15)
+    user$board_index_x.invoke (core.clj:14)
+    user$board_index_in_dir.invokeStatic (core.clj:24)
+    user$board_index_in_dir.invoke (core.clj:23)
+    user$cell_grower.invokeStatic (core.clj:62)
+    user$cell_grower.invoke (core.clj:61)
+    user$get_actions$iter__13809__13813$fn__13814.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+   :at [user$get_color invokeStatic core.clj 77]}]
+ :trace
+ [[user$get_color invokeStatic core.clj 77]
+  [user$get_color invoke core.clj 76]
+  [user$draw_state invokeStatic core.clj 95]
+  [user$draw_state invoke core.clj 91]
+  [clojure.lang.Var invoke Var.java 384]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 16]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ at user$get_color.invokeStatic (core.clj:77)
+    user$get_color.invoke (core.clj:76)
+    user$draw_state.invokeStatic (core.clj:95)
+    user$draw_state.invoke (core.clj:91)
+    clojure.lang.Var.invoke (Var.java:384)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:16)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+   :at [user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ at user$get_actions$iter__14017__14021$fn__14022.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+   :at [user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14017__14021$fn__14022 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "cell" is null
+ at user$get_actions$iter__14017__14021$fn__14022.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+Exception in  :draw  function:  #error {
+ :cause Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ :via
+ [{:type java.lang.NullPointerException
+   :message Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+   :at [user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]}]
+ :trace
+ [[user$get_actions$iter__14121__14125$fn__14126 invoke core.clj 44]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.core$seq__5402 invokeStatic core.clj 137]
+  [clojure.core$filter$fn__5893 invoke core.clj 2809]
+  [clojure.lang.LazySeq sval LazySeq.java 42]
+  [clojure.lang.LazySeq seq LazySeq.java 51]
+  [clojure.lang.RT seq RT.java 535]
+  [clojure.lang.LazilyPersistentVector create LazilyPersistentVector.java 44]
+  [clojure.core$vec invokeStatic core.clj 377]
+  [clojure.core$vec invoke core.clj 367]
+  [user$get_actions invokeStatic core.clj 43]
+  [user$get_actions invoke core.clj 42]
+  [user$tick invokeStatic core.clj 58]
+  [user$tick invoke core.clj 57]
+  [user$update_state invokeStatic core.clj 89]
+  [user$update_state invoke core.clj 88]
+  [clojure.lang.Var invoke Var.java 384]
+  [clojure.lang.Atom swap Atom.java 37]
+  [clojure.core$swap_BANG_ invokeStatic core.clj 2352]
+  [clojure.core$swap_BANG_ invoke core.clj 2345]
+  [quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650 invoke fun_mode.cljc 13]
+  [quil.middlewares.safe_fns$wrap_fn$fn__260 invoke safe_fns.clj 8]
+  [quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318 invoke bind_output.clj 21]
+  [quil.applet$_draw invokeStatic applet.clj 217]
+  [quil.applet$_draw invoke applet.clj 215]
+  [quil.Applet draw nil -1]
+  [processing.core.PApplet handleDraw PApplet.java 2475]
+  [quil.Applet handleDraw nil -1]
+  [processing.awt.PSurfaceAWT$12 callDraw PSurfaceAWT.java 1547]
+  [processing.core.PSurfaceNone$AnimationThread run PSurfaceNone.java 313]]} 
+stacktrace:  java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object, Object, Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+ at user$get_actions$iter__14121__14125$fn__14126.invoke (core.clj:44)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.core$seq__5402.invokeStatic (core.clj:137)
+    clojure.core$filter$fn__5893.invoke (core.clj:2809)
+    clojure.lang.LazySeq.sval (LazySeq.java:42)
+    clojure.lang.LazySeq.seq (LazySeq.java:51)
+    clojure.lang.RT.seq (RT.java:535)
+    clojure.lang.LazilyPersistentVector.create (LazilyPersistentVector.java:44)
+    clojure.core$vec.invokeStatic (core.clj:377)
+    clojure.core$vec.invoke (core.clj:367)
+    user$get_actions.invokeStatic (core.clj:43)
+    user$get_actions.invoke (core.clj:42)
+    user$tick.invokeStatic (core.clj:58)
+    user$tick.invoke (core.clj:57)
+    user$update_state.invokeStatic (core.clj:89)
+    user$update_state.invoke (core.clj:88)
+    clojure.lang.Var.invoke (Var.java:384)
+    clojure.lang.Atom.swap (Atom.java:37)
+    clojure.core$swap_BANG_.invokeStatic (core.clj:2352)
+    clojure.core$swap_BANG_.invoke (core.clj:2345)
+    quil.middlewares.fun_mode$wrap_draw_update$quil_draw__6650.invoke (fun_mode.cljc:13)
+    quil.middlewares.safe_fns$wrap_fn$fn__260.invoke (safe_fns.clj:8)
+    quil.middlewares.bind_output$bind_output$iter__298__302$fn__303$fn__318.invoke (bind_output.clj:21)
+    quil.applet$_draw.invokeStatic (applet.clj:217)
+    quil.applet$_draw.invoke (applet.clj:215)
+    quil.Applet.draw (:-1)
+    processing.core.PApplet.handleDraw (PApplet.java:2475)
+    quil.Applet.handleDraw (:-1)
+    processing.awt.PSurfaceAWT$12.callDraw (PSurfaceAWT.java:1547)
+    processing.core.PSurfaceNone$AnimationThread.run (PSurfaceNone.java:313)
+
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
