@@ -375,3 +375,36 @@ stacktrace:  java.lang.ClassCastException: class user$random_board cannot be cas
 ; Evaluating file: core.clj
 #'user/GoL
 clj꞉user꞉> 
+; Evaluating file: core.clj
+#'user/GoL
+clj꞉user꞉> 
+(count-)#'user/count-neighbors
+clj꞉user꞉> 
+(count-neighbors test-board 0)
+3
+clj꞉user꞉> 
+(count-neighbors test-board 777)
+0
+clj꞉user꞉> 
+(count-neighbors test-board 3)
+0
+clj꞉user꞉> 
+(count-neighbors test-board 2)
+2
+clj꞉user꞉> 
+#'user/count-neighbors-of-func
+clj꞉user꞉> 
+(count-neighbors-of-func test-board 2 cell-grower)
+2
+clj꞉user꞉> 
+(count-neighbors-of-func test-board 2 cell-stationary)
+0
+clj꞉user꞉> 
+#'user/func-at-index
+clj꞉user꞉> 
+(func-at-index test-board 0)
+#function[user/cell-grower]
+clj꞉user꞉> 
+(func-at-index test-board 70)
+nil
+clj꞉user꞉> 

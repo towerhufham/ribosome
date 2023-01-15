@@ -2,11 +2,18 @@
          '[quil.core :as q]
          '[quil.middleware :as m])
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; MAIN VARS
+
 (def width 200)
 (def height 200)
 (def scale 4)
 
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; BOARD & CELL FUNCS
 
 (defn to-board-index [x y]
   (+ x (* y width)))
@@ -20,8 +27,8 @@
 (defn board-index-y [board-index]
   (int (/ board-index width)))
 
-(defn from-board-index [board-index]
-  [(board-index-x board-index) (board-index-y board-index)])
+(defn random-dir []
+  (first (shuffle [[-1 -1] [-1 0] [-1 1] [0 -1] [0 1] [1 -1] [1 0] [1 1]])))
 
 (defn board-index-in-dir [board-index [dx dy]]
   (to-board-index (+ dx (board-index-x board-index)) (+ dy (board-index-y board-index))))
@@ -37,10 +44,22 @@
   (filter identity (for [n (get-neighbors board-index)]
     (get board n))))
 
+(defn count-neighbors [board board-index]
+  (count (neighbor-cells board board-index)))
 
-(defn random-dir []
-  (first (shuffle [[-1 -1] [-1 0] [-1 1] [0 -1] [0 1] [1 -1] [1 0] [1 1]])))
+(defn count-neighbors-of-func [board board-index func]
+  (count (filter #(= func (% :func)) (neighbor-cells board board-index))))
 
+(defn func-at-index [board board-index]
+  (if (some? (get board board-index))
+    ((get board board-index) :func)
+    nil))
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ACTIONS
 
 (defn get-actions [board]
   (vec (filter seq (for [[board-index cell] board]
@@ -64,7 +83,10 @@
 
 
 
-;;these return actions
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CELLS
+
 (defn cell-stationary [_ _ _]
   {})
 
@@ -75,18 +97,14 @@
       {:pos board-index :cell {:func cell-stationary :dir (cell :dir)}})))
 
 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; BOARDS & HELPERS
 ;;note, board positions are hard-coded to the width/height of the board
-(def test-board {0 {:func cell-grower :dir [-1 -1]}, 1 {:func cell-grower :dir [1 0]}, 
-                200 {:func cell-grower :dir [0 1]}, 201 {:func cell-grower :dir [1 1]}})
-
-(defn random-grower []
-  (assoc {} (random-index) {:func cell-grower :dir (random-dir)}))
-
-(defn random-board [] (merge (random-grower) (random-grower) (random-grower) (random-grower) (random-grower)))
 
 ;;assumes symmetrical board, width == height
 (def ^:dynamic *running-boarder* {})
-(defn apply-board-boarder [board] 
+(defn apply-board-boarder [board]
   (binding [*running-boarder* board]
     (doseq [n (range width)]
       (set! *running-boarder* (merge *running-boarder* {(to-board-index n 0) {:func cell-stationary :dir [0 0]}}))
@@ -95,10 +113,19 @@
       (set! *running-boarder* (merge *running-boarder* {(to-board-index (- width 1) n) {:func cell-stationary :dir [0 0]}})))
     *running-boarder*))
 
+(defn random-grower []
+  (assoc {} (random-index) {:func cell-grower :dir (random-dir)}))
+
+(def test-board {0 {:func cell-grower :dir [-1 -1]}, 1 {:func cell-grower :dir [1 0]}, 
+                200 {:func cell-grower :dir [0 1]}, 201 {:func cell-grower :dir [1 1]}})
+
+(defn random-board [] (merge (random-grower) (random-grower) (random-grower) (random-grower) (random-grower)))
 
 
 
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; RENDERING & QUIL
 
 ;;cell colors
 (def cell-colors {cell-grower [255 0 0]
